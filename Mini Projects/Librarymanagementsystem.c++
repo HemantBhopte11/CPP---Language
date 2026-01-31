@@ -1,13 +1,39 @@
 #include<iostream>
 #include<fstream>
+#include<string>
 using namespace std;
 class temp{
     string id,name,author;
     fstream file;
     public:
-    void addBook ();
-    void showAll ();
-    void extractBook();
+    void addBook()
+    {
+        cout<<"\nEnter Book ID :: ";
+        getline(cin,id);
+        cout<<"Enter Book Name :: ";
+        getline(cin,name);
+        cout<<"Enter Book's Author name :: ";
+        getline(cin,author);
+
+        file.open("bookData.txt",ios::out | ios::app);
+        file<<id<<"*"<<name<<"*"<<author<<"\n";
+        file.close();
+    }
+    
+    void showAll(){
+        file.open("bookData.txt",ios :: in);
+        getline(file,id,'*');
+        getline(file,name,'*');
+        getline(file,author,'\n');
+        while(!file.eof()){
+        cout<<"\n\n";
+        cout<<"\t\t";
+        }
+    }
+    
+    void extractBook(){
+        // Implementation for extractBook
+    }
 };
 
 int main()
