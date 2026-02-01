@@ -10,9 +10,9 @@ class temp{
     {
         cout<<"\nEnter Book ID :: ";
         getline(cin,id);
-        cout<<"Enter Book Name :: ";
+        cout<<"\nEnter Book Name :: ";
         getline(cin,name);
-        cout<<"Enter Book's Author name :: ";
+        cout<<"\nEnter Book's Author name :: ";
         getline(cin,author);
 
         file.open("bookData.txt",ios::out | ios::app);
@@ -38,28 +38,32 @@ class temp{
 
 int main()
 {
+    temp obj;
     char choice;
     cout<<"----------------------";
-    cout<<"1-Show All Books";
-    cout<<"2-Extract All Books";
-    cout<<"3-Add books(Admin)";
-    cout<<"3-Exit";
+    cout<<"\n1-Show All Books";
+    cout<<"\n2-Extract All Books";
+    cout<<"\n3-Add books(Admin)";
+    cout<<"\n3-Exit";
     cout<<"----------------------";
-    cout<<"Enter Your choice ::";
+    cout<<"\nEnter Your choice ::";
     cin>>choice;
 
     switch (choice){
         case '1':
-        
+        cin.ignore();
+        obj.showAll();
         break;
         case '2':
-
+        cin.ignore();
+        obj.extractBook();
         break;
         case '3':
-
+        cin.ignore();
+        obj.addBook();
         break;
         case '4':
-
+        return 0;
         break;
         default :
                cout<<"Invalid Choice...!";
