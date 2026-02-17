@@ -1,6 +1,9 @@
 #include<iostream>
 using namespace.std
 class temp{
+       string itemID, itemName;
+       int itemQuantity, itemPrice;
+       fstream file ;
           public:
           void addProduct(void);
           void viewProduct(void);
@@ -28,4 +31,16 @@ int main()
         break;
        }   
        return 0;         
+}
+void temp:: addProduct(){
+       cout<<Enter Product ID :: ";
+       cin>>itemID;
+       cout<<Enter Product Name :: ";
+       cin>>itemname;
+       cout<<"Enter Product Quantity:: ";
+       cin>>itemQuantity;
+       cout<<"Enter Product Price :: ";
+       cin>>itemPrice;
+       
+
 }
