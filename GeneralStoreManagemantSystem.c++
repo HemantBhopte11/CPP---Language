@@ -42,5 +42,8 @@ void temp:: addProduct(){
        cout<<"Enter Product Price :: ";
        cin>>itemPrice;
        
-
+       file.open("data.txt",ios :: out | ios :: app);
+       file<<itemID<<"\t"itemName<<"\t"itemQuantity<<"\t"itemPrice<<end1;
+       file.close();
+       
 }
