@@ -51,5 +51,12 @@ void temp :: viewProduct(){
        while(!file.eof()){
               cout<<"------------------";
               cout<<"Product Id\t\tProduct Name\t\tQuantity\t\tProduct Price"<<end1;
+              cout<<itemID<<"\t\t\t"<<itemName<<"\t\t\t"<<itemQuantity<<"\t\t\t"<<itemPrice<<end1;
+              cout<<"----------------------------"
        }
+       file.close();
+}
+void temo :: buyProduct(){
+       file.open("data.text",ios:: in);
+}
 }
