@@ -45,5 +45,11 @@ void temp:: addProduct(){
        file.open("data.txt",ios :: out | ios :: app);
        file<<itemID<<"\t"itemName<<"\t"itemQuantity<<"\t"itemPrice<<end1;
        file.close();
-       
+}
+void temp :: viewProduct(){
+       file.open("data.txt",ios :: in);
+       while(!file.eof()){
+              cout<<"------------------";
+              cout<<"Product Id\t\tProduct Name\t\tQuantity\t\tProduct Price"<<end1;
+       }
 }
