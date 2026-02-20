@@ -3,7 +3,9 @@ using namespace.std
 class temp{
        string itemID, itemName;
        int itemQuantity, itemPrice;
-       fstream file ;
+       fstream file,file1;
+       int totalAmount,quantity,itemRate;
+       string search ;
           public:
           void addProduct(void);
           void viewProduct(void);
@@ -58,5 +60,18 @@ void temp :: viewProduct(){
 }
 void temo :: buyProduct(){
        file.open("data.text",ios:: in);
-}
+       file1.open("temp.txt",ios :: out | ios :: app);
+       cout<<"Enter Product ID :: ";
+       cin>>search;
+       cout<<"Enter Quantity";
+       cin>>quantity;
+
+       while(!file.eof()){
+              if(itemID == search){
+                     itemQuantity = itemQuantity - quantity;
+                     file<<itemID<<"\t"<<itemName<<"\t"<<itemQuantity<<"\t"<<itemPrice<<end1;
+                     }else{
+                            file<<itemID<<"\t"<<itemName<<"\t"<<itemQuantity<<"\t"<<itemPrice<<end1;
+                     }
+       }
 }
