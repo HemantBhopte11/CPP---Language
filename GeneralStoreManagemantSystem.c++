@@ -61,6 +61,7 @@ void temp :: viewProduct(){
 void temo :: buyProduct(){
        file.open("data.text",ios:: in);
        file1.open("temp.txt",ios :: out | ios :: app);
+       
        cout<<"Enter Product ID :: ";
        cin>>search;
        cout<<"Enter Quantity";
